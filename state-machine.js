@@ -156,10 +156,10 @@
         if (false === StateMachine.beforeEvent(this, name, from, to, args))
           return StateMachine.Result.CANCELLED;
 
-        if (from === to) {
-          StateMachine.afterEvent(this, name, from, to, args);
-          return StateMachine.Result.NOTRANSITION;
-        }
+        // if (from === to) {
+        //   StateMachine.afterEvent(this, name, from, to, args);
+        //   return StateMachine.Result.NOTRANSITION;
+        // }
 
         // prepare a transition method for use EITHER lower down, or by caller if they want an async transition (indicated by an ASYNC return value from leaveState)
         var fsm = this;
